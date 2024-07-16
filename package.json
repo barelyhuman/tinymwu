@@ -1,0 +1,48 @@
+{
+  "name": "@barelyhuman/tinymwu",
+  "version": "0.0.0",
+  "description": "Mann Whitney U comparision for benchmarking samples",
+  "keywords": [
+    "mann-whitney-u",
+    "sample",
+    "comparision"
+  ],
+  "license": "MIT",
+  "author": "reaper<ahoy@barelyhuman.dev>",
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": {
+        "require": "./dist/cjs/index.d.cts",
+        "import": "./dist/esm/index.d.mts"
+      },
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/esm/index.mjs"
+    }
+  },
+  "main": "./dist/cjs/index.cjs",
+  "types": "./dist/cjs/index.d.cts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "./build.mjs",
+    "dev": "./build.mjs --dev",
+    "publint": "publint"
+  },
+  "prettier": "@barelyhuman/prettier-config",
+  "devDependencies": {
+    "@barelyhuman/prettier-config": "^1.1.0",
+    "bumpp": "^9.4.1",
+    "esbuild-multicontext": "^0.11.0",
+    "prettier": "^3.3.3",
+    "rollup": "^4.18.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "typescript": "^5.5.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
